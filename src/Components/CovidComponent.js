@@ -16,7 +16,7 @@ const CovidComponent = () => {
       dispatch(getCovidData());
     }
     console.log('i fire once');
-  }, []);
+  });
 
   return (
 
