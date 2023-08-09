@@ -1,13 +1,12 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
 import { getCovidData } from '../Redux/covidSlice';
 
 const CovidComponent = () => {
   const data = useSelector((state) => state.convidData.data);
-  const itemsToRender = data.slice(1, 11);
+  const itemsToRender = data.slice(0, 10);
   console.log(itemsToRender);
   const dispatch = useDispatch();
 
@@ -22,17 +21,16 @@ const CovidComponent = () => {
 
     <>
       <Container>
-        <Card style={{ width: '18rem' }}>
-          <Card.Img variant="top" src="holder.js/100px180" />
-          <Card.Body>
-            <Card.Title>Card Title</Card.Title>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the cards content.
-            </Card.Text>
-            <Button variant="primary">Go somewhere</Button>
-          </Card.Body>
-        </Card>
+        {itemsToRender.map((item) => (
+          <div key={item.Country_text} className="card">
+            <div className="active"><h2>{item.Country_text}</h2></div>
+            <div className="inactive">
+              <h2>
+                <Link to={`/${item.Country_text}`}>{item.Country_text}</Link>
+              </h2>
+            </div>
+          </div>
+        ))}
       </Container>
     </>
   );
