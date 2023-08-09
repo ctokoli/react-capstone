@@ -1,10 +1,10 @@
-import { configureStore } from "@reduxjs/toolkit";
-import getData from './covidSlice' 
+import { configureStore } from '@reduxjs/toolkit';
+import getDataReducer from './covidSlice';
 
 const store = configureStore({
-    reducer: {
-        convidData: getData
-    }
+  reducer: {
+    convidData: getDataReducer,
+  },
 });
 
 export default store;
