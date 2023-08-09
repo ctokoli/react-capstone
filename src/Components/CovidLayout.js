@@ -9,7 +9,7 @@ const NavigationLayout = () => (
   <>
     <Navbar bg="danger" data-bs-theme="dark">
       <Container>
-        <Navbar.Brand><NavLink>Navbar</NavLink></Navbar.Brand>
+        <Navbar.Brand><NavLink to="/">Navbar</NavLink></Navbar.Brand>
         <Form data-bs-theme="light">
           <Row>
             <Col>
