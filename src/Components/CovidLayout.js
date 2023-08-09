@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Form from 'react-bootstrap/Form';
@@ -8,7 +9,7 @@ const NavigationLayout = () => (
   <>
     <Navbar bg="danger" data-bs-theme="dark">
       <Container>
-        <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+        <Navbar.Brand><NavLink>Navbar</NavLink></Navbar.Brand>
         <Form data-bs-theme="light">
           <Row>
             <Col>
