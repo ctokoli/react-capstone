@@ -1,7 +1,36 @@
 body {
   background-color: midnightblue !important;
+  color: #fff !important
 }
 
 h2{
     color: white !important;
+    margin-bottom: 0 !important;
+}
+
+.card-item {
+    background-color: white;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.active-data {
+    background-color: #4fb84f;
+    padding: 10px;
+}
+
+.inactive-data {
+    background-color: #ff1d4e;
+    padding: 10px;
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
