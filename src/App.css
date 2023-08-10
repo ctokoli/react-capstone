@@ -19,8 +19,13 @@ h2{
     margin-top: 30px;
 }
 
+div.grid a {
+    text-decoration: none;
+    color: #fff;
+}
+
 .active-data {
-    background-color: #4fb84f;
+    background-color: #FD5294;
     padding: 10px;
 }
 
@@ -29,8 +34,12 @@ h2{
     padding: 10px;
 }
 
+h3 {
+    color: #2c2c2c !important;
+}
+
 .top {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: space-between;
 }
