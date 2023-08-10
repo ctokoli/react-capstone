@@ -19,8 +19,8 @@ const CovidComponent = () => {
 
     <>
       <Container>
+        <h2>COVID-19 Statistics Data</h2>
         <div className="grid">
-
           {itemsToRender.map((item) => (
             <Link to={`/${item.Country_text}`} key={item.Country_text}>
               <div className="card-item">
@@ -29,19 +29,13 @@ const CovidComponent = () => {
                     <h3>
                       {item.Country_text}
                     </h3>
-                    <div>
-                      <h5>Total Cases</h5>
-                      <h6>{item['Total Cases_text']}</h6>
-                    </div>
                   </div>
-                  <h5>Recovered</h5>
-                  <span>{item['Total Recovered_text']}</span>
                 </div>
                 <div className="inactive-data">
                   <h5>
-                    Total Deaths
+                    Total Cases
                   </h5>
-                  <h6>{item['Total Deaths_text']}</h6>
+                  <h6>{item['Total Cases_text']}</h6>
                 </div>
               </div>
             </Link>
