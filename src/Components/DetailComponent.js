@@ -1,4 +1,4 @@
-/* eslint-disable max-len */
+import { Container } from 'react-bootstrap';
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
@@ -18,22 +18,22 @@ const DetailComponent = () => {
   //   console.log(country);
   console.log(countryData);
   return (
-    <>
+    <Container>
       {countryData.length > 0
         ? (
-          <div>
+          <div className="details">
             {countryData.map((item) => (
               <div key={item.Country_text}>
-                <h3>{item.Country_text}</h3>
-                <h1>{item['Total Cases_text']}</h1>
-                <h1>{item['Total Recovered_text']}</h1>
-                <h1>{item['Total Deaths_text']}</h1>
+                <div className="country"><h3>{item.Country_text}</h3></div>
+                <div className="total"><h1>{item['Total Cases_text']}</h1></div>
+                <div className="recover"><h1>{item['Total Recovered_text']}</h1></div>
+                <div className="deaths"><h1>{item['Total Deaths_text']}</h1></div>
               </div>
             ))}
           </div>
         )
-        : (<h2>No Data</h2>)}
-    </>
+        : (<h2>Loading Data.....</h2>)}
+    </Container>
   );
 };
 
