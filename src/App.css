@@ -47,6 +47,10 @@ h3 {
     justify-content: space-between;
 }
 
+.top h3{
+    
+}
+
 div.container h2 {
     color: rgb(39, 39, 39) !important;
     padding-top: 10px;
