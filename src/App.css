@@ -47,9 +47,6 @@ h3 {
     justify-content: space-between;
 }
 
-.top h3{
-
-}
 
 div.container h2 {
     color: rgb(39, 39, 39) !important;
@@ -88,6 +85,8 @@ section.top-page {
     justify-content: space-between;
 }
 
+
+
 button.btn {
     margin-right: 11px;
 }
@@ -125,6 +124,22 @@ a.active img {
     .details {
         margin-top: 0;
     }
+
+    section.top-page {
+        display: flex;
+        flex-direction: column; 
+    }
+
+    .top-btns {
+        padding: 4px;
+        padding-left: 9px;
+        text-align: center;
+    }
+
+button.btn.btn-outline-success {
+    margin-bottom: 5px;
+}
+
 }
 
 
