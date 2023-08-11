@@ -82,6 +82,10 @@ a.active img {
     display: none;
 }
 
+.bg-back{
+    background-color: #FD5294;
+}
+
 
 @media screen and (max-width: 480px) {
 .grid {
