@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getCovidData } from '../Redux/covidSlice';
+import DetailsCard from './DetailsCardComponent';
 
 const DetailComponent = () => {
   const dispatch = useDispatch();
@@ -11,7 +12,7 @@ const DetailComponent = () => {
     if (data.length === 0) {
       dispatch(getCovidData());
     }
-  });
+  }, [dispatch, data.length]);
   const { country } = useParams();
   const countryData = data.filter((item) => item.country === country);
   return (
@@ -20,28 +21,7 @@ const DetailComponent = () => {
         ? (
           <div className="details">
             {countryData.map((item) => (
-              <div key={item.country}>
-                <div className="country detail">
-                  <h4>Country</h4>
-                  <h3>{item.country}</h3>
-                </div>
-                <div className="total detail">
-                  <h4>Total Population</h4>
-                  <h3>{item.population}</h3>
-                </div>
-                <div className="total detail">
-                  <h4>Total Cases</h4>
-                  <h3>{item.cases.total}</h3>
-                </div>
-                <div className="recover detail">
-                  <h4>Total Recovered</h4>
-                  <h3>{item.cases.recovered}</h3>
-                </div>
-                <div className="deaths detail">
-                  <h4>Total Deaths</h4>
-                  <h3>{item.deaths.total}</h3>
-                </div>
-              </div>
+              <DetailsCard item={item} key={item.country} />
             ))}
           </div>
         )
