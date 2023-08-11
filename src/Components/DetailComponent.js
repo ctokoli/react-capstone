@@ -13,29 +13,33 @@ const DetailComponent = () => {
     }
   });
   const { country } = useParams();
-  const countryData = data.filter((item) => item.Country_text === country);
+  const countryData = data.response.filter((item) => item.country === country);
   return (
     <Container>
       {countryData.length > 0
         ? (
           <div className="details">
             {countryData.map((item) => (
-              <div key={item.Country_text}>
+              <div key={item.country}>
                 <div className="country detail">
                   <h4>Country</h4>
-                  <h3>{item.Country_text}</h3>
+                  <h3>{item.country}</h3>
+                </div>
+                <div className="total detail">
+                  <h4>Total Population</h4>
+                  <h3>{item.population}</h3>
                 </div>
                 <div className="total detail">
                   <h4>Total Cases</h4>
-                  <h3>{item['Total Cases_text']}</h3>
+                  <h3>{item.cases.total}</h3>
                 </div>
                 <div className="recover detail">
                   <h4>Total Recovered</h4>
-                  <h3>{item['Total Recovered_text']}</h3>
+                  <h3>{item.cases.recovered}</h3>
                 </div>
                 <div className="deaths detail">
                   <h4>Total Deaths</h4>
-                  <h3>{item['Total Deaths_text']}</h3>
+                  <h3>{item.deaths.total}</h3>
                 </div>
               </div>
             ))}
