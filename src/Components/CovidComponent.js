@@ -5,53 +5,36 @@ import Container from 'react-bootstrap/Container';
 import { Link } from 'react-router-dom';
 import { getCovidData } from '../Redux/covidSlice';
 import FilterComponent from './filterComponent';
+import CardComponent from './CardComponent';
 
 const CovidComponent = () => {
   const dispatch = useDispatch();
-  const data = useSelector((state) => state.convidData.data);
-  console.log(data);
-  const [regionValue, setRegionValue] = useState('');
-
-  const handleButtonClicked = (value) => {
-    console.log(value);
-    setRegionValue(value);
-  };
+  const data = useSelector((state) => {
+    const notFiltered = state.convidData.data;
+    const filtered = state.convidData.filterData;
+    if (filtered.length === 0) {
+      return notFiltered;
+    }
+    return filtered;
+  });
 
   useEffect(() => {
     if (data.length === 0) {
       dispatch(getCovidData());
     }
-  });
-
-  // if (data !== undefined) {
-  //   data = data.filter((item) => item.continent === regionValue);
-  // }
+  }, [dispatch, data.length]);
 
   return (
     <>
       <Container>
         <section className="top-page">
-          <h2>COVID-19 Statistics Data</h2>
+          <h2>COVID-19 Statistics: Filter by Region</h2>
           <FilterComponent />
         </section>
         <div className="grid">
           {data.map((item) => (
             <Link to={`/${item.country}`} key={item.country}>
-              <div className="card-item">
-                <div className="active-data">
-                  <div className="top">
-                    <h3>
-                      {item.country}
-                    </h3>
-                  </div>
-                </div>
-                <div className="inactive-data">
-                  <h5>
-                    Total Population
-                  </h5>
-                  <h6>{item.population}</h6>
-                </div>
-              </div>
+              <CardComponent item={item} />
             </Link>
           ))}
         </div>
