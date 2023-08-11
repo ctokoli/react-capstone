@@ -26,7 +26,6 @@ const continent = [
 
 const FilterComponent = () => {
   const dispatch = useDispatch();
-
   const handleValue = (value) => {
     dispatch(filterRegions(value));
   };
