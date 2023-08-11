@@ -13,7 +13,7 @@ const DetailComponent = () => {
     }
   });
   const { country } = useParams();
-  const countryData = data.response.filter((item) => item.country === country);
+  const countryData = data.filter((item) => item.country === country);
   return (
     <Container>
       {countryData.length > 0
