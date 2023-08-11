@@ -48,7 +48,7 @@ In this project, I developed a Single Page Application (SPA) that use the Covid 
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://rubydevi.github.io/todolist-minimalist/dist/)
+- [Live Demo Link](https://covid-stats-p1cd.onrender.com/)
 <!-- - N/A -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
