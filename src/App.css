@@ -3,6 +3,14 @@ h2{
     margin-bottom: 0 !important;
 }
 
+.detail h4{
+    color: #fff;
+}
+
+.details {
+    margin-top: 27px;
+}
+
 .card-item {
     background-color: white;
 }
@@ -25,7 +33,7 @@ div.grid a {
 }
 
 .inactive-data {
-    background-color: #c7c31e;
+background-color: #CE4277;
     padding: 10px;
 }
 
@@ -42,6 +50,36 @@ h3 {
 div.container h2 {
     color: rgb(39, 39, 39) !important;
     padding-top: 10px;
+}
+
+.detail{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.country{
+    background-color: #FD5294;
+}
+
+.total{
+    background-color: #CE4277;
+}
+
+.recover{
+    background-color: #FD5294;
+}
+
+.deaths{
+    background-color: #CE4277;
+}
+
+a img {
+    width: 27px;
+}
+
+a.active img {
+    display: none;
 }
 
 
@@ -64,6 +102,10 @@ div.container h2 {
 
     div.container h2 {
         color: rgb(255, 255, 255) !important;
+    }
+
+    .details {
+        margin-top: 0;
     }
 }
 
