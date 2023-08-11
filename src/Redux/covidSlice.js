@@ -28,12 +28,18 @@ export const getCovidData = createAsyncThunk('get/data', async (rejectWithValue)
 const getDataSlice = createSlice({
   name: 'CovidAPI',
   initialState,
-  reducers: {},
+  reducers: {
+    filterRegions: (state, action) => {
+      state.data = state.data.filter((item) => item.continent === action.payload);
+    },
+  },
   extraReducers: (builder) => {
     builder.addCase(getCovidData.fulfilled, (state, action) => {
       state.data = action.payload;
     });
   },
 });
+
+export const { filterRegions } = getDataSlice.actions;
 
 export default getDataSlice.reducer;
