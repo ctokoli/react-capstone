@@ -2,13 +2,14 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   data: [],
+  filterData: [],
 };
 
-const url = 'https://covid-193.p.rapidapi.com/statistics';
+const url = process.env.REACT_APP_API_URL;
 const options = {
   method: 'GET',
   headers: {
-    'X-RapidAPI-Key': 'c3ea3ef7d6mshf9ebf0c1cc5734fp155ae6jsn928f52ac78ea',
+    'X-RapidAPI-Key': process.env.REACT_APP_API_KEY,
     'X-RapidAPI-Host': 'covid-193.p.rapidapi.com',
   },
 };
@@ -20,7 +21,6 @@ export const getCovidData = createAsyncThunk('get/data', async (rejectWithValue)
     const itemsToRender = data.response?.slice(100, 140);
     return itemsToRender;
   } catch (error) {
-    console.log(error);
     return rejectWithValue(`there was an arror: ${error}`);
   }
 });
@@ -30,7 +30,10 @@ const getDataSlice = createSlice({
   initialState,
   reducers: {
     filterRegions: (state, action) => {
-      state.data = state.data.filter((item) => item.continent === action.payload);
+      const selectedContinent = action.payload;
+      state.filterData = state.data.filter((item) => (
+        item.continent === selectedContinent
+      ));
     },
   },
   extraReducers: (builder) => {
