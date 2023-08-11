@@ -48,7 +48,7 @@ h3 {
 }
 
 .top h3{
-    
+
 }
 
 div.container h2 {
@@ -80,6 +80,16 @@ div.container h2 {
 
 a img {
     width: 27px;
+}
+
+section.top-page {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+button.btn {
+    margin-right: 11px;
 }
 
 a.active img {
