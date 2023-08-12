@@ -51,6 +51,11 @@ In this project, I developed a Single Page Application (SPA) that use the Covid 
 - [Live Demo Link](https://covid-stats-p1cd.onrender.com/)
 <!-- - N/A -->
 
+## 🚀 Video Recording <a name="video"></a>
+
+- [Video ](https://drive.google.com/file/d/1gJdc3TPpkgGaqFrCs9_UFWwKBBZWQsVk/view?usp=sharing)
+<!-- - N/A -->
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
