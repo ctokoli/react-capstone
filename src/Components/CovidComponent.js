@@ -1,7 +1,10 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Container from 'react-bootstrap/Container';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleRight } from '@fortawesome/free-solid-svg-icons';
 import { getCovidData } from '../Redux/covidSlice';
 import FilterComponent from './filterComponent';
 import CardComponent from './CardComponent';
@@ -35,7 +38,11 @@ const CovidComponent = () => {
           <div className="grid">
             {data.map((item) => (
               <Link to={`/${item.country}`} key={item.country}>
-                <CardComponent item={item} />
+                <div className="card-item active-data">
+                  <FontAwesomeIcon icon={faCircleRight} />
+                  <CardComponent item={item} />
+                </div>
+
               </Link>
             ))}
           </div>
