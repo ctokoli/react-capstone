@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getCovidData } from '../Redux/covidSlice';
 import DetailsCard from './DetailsCardComponent';
+import LoadingSpinner from './LoadingSpinner';
 
 const DetailComponent = () => {
   const dispatch = useDispatch();
@@ -27,7 +28,7 @@ const DetailComponent = () => {
             ))}
           </div>
         )
-        : (<h2>Loading Data.....</h2>)}
+        : (<LoadingSpinner />)}
     </Container>
   );
 };
