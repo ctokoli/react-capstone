@@ -1,4 +1,5 @@
-/* eslint-disable react/prop-types */
+import PropTypes from 'prop-types';
+
 const CardComponent = ({ item }) => (
   <div className="card-item">
     <div className="active-data">
@@ -17,4 +18,7 @@ const CardComponent = ({ item }) => (
   </div>
 );
 
+CardComponent.propTypes = {
+  item: PropTypes.array.isRequired,
+};
 export default CardComponent;
