@@ -21,7 +21,9 @@ const DetailComponent = () => {
         ? (
           <div className="details">
             {countryData.map((item) => (
-              <DetailsCard item={item} key={item.country} />
+              <div key={item.country}>
+                <DetailsCard item={item} />
+              </div>
             ))}
           </div>
         )
