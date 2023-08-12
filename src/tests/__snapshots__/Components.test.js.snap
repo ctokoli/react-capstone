@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test for the components should render the cardComponent 1`] = `
+<div
+  className="card-item"
+>
+  <div
+    className="active-data"
+  >
+    <div
+      className="top"
+    >
+      <h3 />
+    </div>
+  </div>
+  <div
+    className="inactive-data"
+  >
+    <h5>
+      Total Population
+    </h5>
+    <h6 />
+  </div>
+</div>
+`;
