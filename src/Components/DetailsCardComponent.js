@@ -1,6 +1,7 @@
-/* eslint-disable react/prop-types */
-const DetailsCard = ({ item, key }) => (
-  <div key={key}>
+import PropTypes from 'prop-types';
+
+const DetailsCard = ({ item }) => (
+  <>
     <div className="country detail">
       <h4>Country</h4>
       <h3>{item.country}</h3>
@@ -11,17 +12,20 @@ const DetailsCard = ({ item, key }) => (
     </div>
     <div className="total detail">
       <h4>Total Cases</h4>
-      <h3>{item.cases.total}</h3>
+      <h3>{item.cases}</h3>
     </div>
     <div className="recover detail">
       <h4>Total Recovered</h4>
-      <h3>{item.cases.recovered}</h3>
+      <h3>{item.cases}</h3>
     </div>
     <div className="deaths detail">
       <h4>Total Deaths</h4>
-      <h3>{item.deaths.total}</h3>
+      <h3>{item.deaths}</h3>
     </div>
-  </div>
+  </>
 );
 
+DetailsCard.propTypes = {
+  item: PropTypes.array.isRequired,
+};
 export default DetailsCard;
