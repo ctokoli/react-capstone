@@ -1,3 +1,4 @@
+/* eslint-disable consistent-return */
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
@@ -21,7 +22,7 @@ export const getCovidData = createAsyncThunk('get/data', async (rejectWithValue)
     const itemsToRender = data.response?.slice(100, 140);
     return itemsToRender;
   } catch (error) {
-    return rejectWithValue(`there was an arror: ${error}`);
+    return rejectWithValue(`there was an error: ${error}`);
   }
 });
 
