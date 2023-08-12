@@ -11,8 +11,6 @@ h2 {
   margin-top: 27px;
 }
 
-
-
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -38,8 +36,6 @@ div.grid a {
 h3 {
   color: #fff !important;
 }
-
-
 
 div.container h2 {
   color: rgb(39, 39, 39) !important;
@@ -129,28 +125,27 @@ a.active img {
     margin-bottom: 5px;
   }
 
-    .card-item {
-      height: 160px;
-      text-align: right;
-    }
+  .card-item {
+    height: 160px;
+    text-align: right;
+  }
 
-    .top h3 {
-      margin-top: 30px;
-      font-size: 1.3em;
-      text-transform: capitalize;
-    }
+  .top h3 {
+    margin-top: 30px;
+    font-size: 1.3em;
+    text-transform: capitalize;
+  }
 
-    svg.svg-inline--fa.fa-gear {
-      font-size: 15px;
-      color: #fff;
-      margin-right: 11px;
-      margin-left: 10px;
-    }
+  svg.svg-inline--fa.fa-gear {
+    font-size: 15px;
+    color: #fff;
+    margin-right: 11px;
+    margin-left: 10px;
+  }
 
-    svg.svg-inline--fa.fa-microphone {
-      font-size: 15px;
-      color: #fff;
-      margin-right: 10px;
-    }
-
+  svg.svg-inline--fa.fa-microphone {
+    font-size: 15px;
+    color: #fff;
+    margin-right: 10px;
+  }
 }
