@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import reducer, { filterRegions } from '../Redux/covidSlice';
 
 const mockData = [];
