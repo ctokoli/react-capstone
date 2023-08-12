@@ -2,7 +2,6 @@ import renderer from 'react-test-renderer';
 import { screen, render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import CardComponent from '../Components/CardComponent';
-import DetailsCard from '../Components/DetailsCardComponent';
 
 describe('Test for the components', () => {
   it('should render the cardComponent', () => {
@@ -14,10 +13,9 @@ describe('Test for the components', () => {
     ).toJSON();
     expect(card).toMatchSnapshot();
   });
-  it('should the cardComponent', () => {
+  it('should show a text in the cardComponent', () => {
     const item = [];
-    const key = 'value';
-    render(<DetailsCard key={key} item={item} />);
+    render(<CardComponent item={item} />);
     const headings = screen.getByText('Total Population');
     expect(headings).toBeInTheDocument();
   });
