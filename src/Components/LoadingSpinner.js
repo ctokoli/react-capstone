@@ -6,19 +6,16 @@ function LoadingSpinner() {
   return (
     <>
       <Container>
-        <div className="d-flex justify-content-center">
-          <Button variant="danger" disabled>
-            <Spinner
-              as="span"
-              animation="grow"
-              size="sm"
-              role="status"
-              aria-hidden="true"
-            />
-            <h3>Loading...</h3>
-          </Button>
-        </div>
-
+        <Button variant="danger" disabled>
+          <Spinner
+            as="span"
+            animation="grow"
+            size="sm"
+            role="status"
+            aria-hidden="true"
+          />
+          <h3>Loading...</h3>
+        </Button>
       </Container>
     </>
   );
