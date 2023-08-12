@@ -11,9 +11,7 @@ h2 {
   margin-top: 27px;
 }
 
-.card-item {
-  background-color: white;
-}
+
 
 .grid {
   display: grid;
@@ -41,11 +39,7 @@ h3 {
   color: #fff !important;
 }
 
-.top {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-}
+
 
 div.container h2 {
   color: rgb(39, 39, 39) !important;
@@ -93,7 +87,7 @@ a.active img {
 }
 
 .bg-back {
-  background-color: #fd5294;
+  background-color: #ce4277;
 }
 
 @media screen and (max-width: 480px) {
@@ -122,8 +116,7 @@ a.active img {
   }
 
   section.top-page {
-    display: flex;
-    flex-direction: column;
+    display: none;
   }
 
   .top-btns {
@@ -135,4 +128,29 @@ a.active img {
   button.btn.btn-outline-success {
     margin-bottom: 5px;
   }
+
+    .card-item {
+      height: 160px;
+      text-align: right;
+    }
+
+    .top h3 {
+      margin-top: 30px;
+      font-size: 1.3em;
+      text-transform: capitalize;
+    }
+
+    svg.svg-inline--fa.fa-gear {
+      font-size: 15px;
+      color: #fff;
+      margin-right: 11px;
+      margin-left: 10px;
+    }
+
+    svg.svg-inline--fa.fa-microphone {
+      font-size: 15px;
+      color: #fff;
+      margin-right: 10px;
+    }
+
 }
