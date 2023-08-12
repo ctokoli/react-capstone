@@ -19,7 +19,7 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 📖 Spaceship <a name="about-project"></a>
+# 📖 Convid-19 Stats<a name="about-project"></a>
 
 In this project, I developed a Single Page Application (SPA) that use the Covid 19 API data to show verious Covid 19 Statistics in different countries.
 
