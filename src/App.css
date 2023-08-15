@@ -59,7 +59,7 @@ div.container h2 {
 }
 
 .country {
-  background-color: #FC5193;
+  background-color: #fc5193;
   height: 121px;
 }
 
@@ -68,7 +68,6 @@ div.container h2 {
 }
 
 .total {
-  
   background-color: #ce4277;
 }
 
@@ -77,28 +76,31 @@ div.container h2 {
 }
 
 .deaths {
- 
   background-color: #ce4277;
 }
 
 .country.detail.USA {
-background-image: url(images/usa.png);
-background-position-y: 20px;
-
+  background-image: url(images/usa.png);
+  background-position-y: 20px;
 }
+
 .country.detail.UK {
   background-image: url(images/uk.png);
 }
+
 .country.detail.France {
   background-image: url(images/france.png);
   background-position-y: 0;
 }
+
 .country.detail.S\..Korea {
   background-image: url(images/south_korea.png);
 }
+
 .country.detail.Brazil {
   background-image: url(images/brazil.png);
 }
+
 .country.detail.Italy {
   background-image: url(images/italy.png);
   background-position-y: 0;
@@ -139,10 +141,8 @@ button.btn {
   margin-right: 11px;
 }
 
-
-
 .bg-back {
-  background-color: #ED4C8B;
+  background-color: #ed4c8b;
 }
 
 @media screen and (max-width: 480px) {
@@ -154,10 +154,9 @@ button.btn {
     grid-template-areas: 'World World' 'space space';
   }
 
-  .World{
+  .World {
     grid-area: World;
     background-image: url(images/world-map-100.png);
-    background-repeat: no-repeat;
     background-repeat: no-repeat;
     background-size: contain;
     background-position-x: 61px;
@@ -165,108 +164,106 @@ button.btn {
     border-color: #fd5294 !important;
   }
 
-  .space{
+  .space {
     grid-area: space;
     display: block;
     background-color: #e43b7a;
     border: 1px solid;
     border-color: #e43b7a !important;
-
   }
 
   .card-item.USA {
     background-color: #ed4282;
     background-image: url(images/usa.png);
     background-size: 100px;
-      background-position-x: 30px;
-      background-position-y: 20px;
-      background-repeat: no-repeat;
-      border: none !important;
-}
+    background-position-x: 30px;
+    background-position-y: 20px;
+    background-repeat: no-repeat;
+    border: none !important;
+  }
 
-.card-item.Germany {
-  background-color: #ed4282;
+  .card-item.Germany {
+    background-color: #ed4282;
     background-image: url(images/germany.png);
     background-size: 100px;
     background-position-x: 30px;
     background-position-y: 20px;
     background-repeat: no-repeat;
     border: none !important;
-}
+  }
 
-.card-item.UK{
-  background-color: #ed4282;
+  .card-item.UK {
+    background-color: #ed4282;
     background-image: url(images/uk.png);
     background-size: 100px;
     background-position-x: 30px;
     background-position-y: 20px;
     background-repeat: no-repeat;
     border: none !important;
-}
+  }
 
-.card-item.India {
-  background-color: #D04579;
-  background-image: url(images/india.png);
-  background-size: 100px;
-  background-position-x: 30px;
-  background-position-y: 20px;
-  background-repeat: no-repeat;
-}
-
-.card-item.France {
-  background-color: #D04579;
-  background-image: url(images/france.png);
+  .card-item.India {
+    background-color: #d04579;
+    background-image: url(images/india.png);
     background-size: 100px;
     background-position-x: 30px;
     background-position-y: 20px;
     background-repeat: no-repeat;
-  
-}
+  }
 
-.card-item.Russia {
-  background-color: #D04579;
-  background-image: url(images/russia.png);
+  .card-item.France {
+    background-color: #d04579;
+    background-image: url(images/france.png);
     background-size: 100px;
     background-position-x: 30px;
     background-position-y: 20px;
     background-repeat: no-repeat;
-}
+  }
 
-.card-item.Italy {
-  background-color: #ed4282;
-  background-image: url(images/italy.png);
+  .card-item.Russia {
+    background-color: #d04579;
+    background-image: url(images/russia.png);
     background-size: 100px;
     background-position-x: 30px;
     background-position-y: 20px;
     background-repeat: no-repeat;
-}
+  }
 
-.card-item.Japan {
-  background-color: #D04579;
-  background-image: url(images/japan.png);
-  background-size: 100px;
-  background-position-x: 30px;
-  background-position-y: 20px;
-  background-repeat: no-repeat;
-}
-
-.card-item.S\..Korea {
-  background-color: #D04579;
-  background-image: url(images/south_korea.png);
+  .card-item.Italy {
+    background-color: #ed4282;
+    background-image: url(images/italy.png);
     background-size: 100px;
     background-position-x: 30px;
     background-position-y: 20px;
     background-repeat: no-repeat;
-}
+  }
 
-.card-item.Brazil {
-  background-color: #ed4282;
-  background-image: url(images/brazil.png);
+  .card-item.Japan {
+    background-color: #d04579;
+    background-image: url(images/japan.png);
     background-size: 100px;
     background-position-x: 30px;
     background-position-y: 20px;
     background-repeat: no-repeat;
-}
+  }
+
+  .card-item.S\..Korea {
+    background-color: #d04579;
+    background-image: url(images/south_korea.png);
+    background-size: 100px;
+    background-position-x: 30px;
+    background-position-y: 20px;
+    background-repeat: no-repeat;
+  }
+
+  .card-item.Brazil {
+    background-color: #ed4282;
+    background-image: url(images/brazil.png);
+    background-size: 100px;
+    background-position-x: 30px;
+    background-position-y: 20px;
+    background-repeat: no-repeat;
+  }
 
   div.container {
     padding: 0;
@@ -299,14 +296,14 @@ button.btn {
     margin-bottom: 5px;
   }
 
-    .card-item {
-      height: 160px;
-      text-align: right;
-      background-color: #fd5294;
-      padding: 10px;
-      border: 1px solid;
-      border-color: #d6376d;
-    }
+  .card-item {
+    height: 160px;
+    text-align: right;
+    background-color: #fd5294;
+    padding: 10px;
+    border: 1px solid;
+    border-color: #d6376d;
+  }
 
   .space h6 {
     color: #fff;
