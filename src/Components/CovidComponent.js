@@ -30,7 +30,7 @@ const CovidComponent = () => {
   useEffect(() => {
     const projectDSection = document.querySelector('.World');
     if (projectDSection) {
-      projectDSection.insertAdjacentHTML('afterend', '<div class="space"><h1>Space</h1></div>');
+      projectDSection.insertAdjacentHTML('afterend', '<div class="space"><h6>STATS BY COUNTRY</h6></div>');
     }
   });
 
