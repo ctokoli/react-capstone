@@ -50,23 +50,75 @@ div.container h2 {
 .detail {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 20px;
+  background-size: 100px;
+  background-position-x: 35px;
+  background-position-y: 5px;
+  background-repeat: no-repeat;
 }
 
 .country {
-  background-color: #fd5294;
+  background-color: #FC5193;
+  height: 121px;
+}
+
+.country.detail h4 {
+  visibility: hidden;
 }
 
 .total {
+  
   background-color: #ce4277;
 }
 
 .recover {
-  background-color: #ce4277;
+  background-color: #fd5294;
 }
 
 .deaths {
-  background-color: #fd5294;
+ 
+  background-color: #ce4277;
+}
+
+.country.detail.USA {
+background-image: url(images/usa.png);
+background-position-y: 20px;
+
+}
+.country.detail.UK {
+  background-image: url(images/uk.png);
+}
+.country.detail.France {
+  background-image: url(images/france.png);
+  background-position-y: 0;
+}
+.country.detail.S\..Korea {
+  background-image: url(images/south_korea.png);
+}
+.country.detail.Brazil {
+  background-image: url(images/brazil.png);
+}
+.country.detail.Italy {
+  background-image: url(images/italy.png);
+  background-position-y: 0;
+}
+
+.country.detail.India {
+  background-image: url(images/india.png);
+  background-position-y: 0;
+}
+
+.country.detail.Germany {
+  background-image: url(images/germany.png);
+}
+
+.country.detail.Japan {
+  background-image: url(images/japan.png);
+}
+
+.country.detail.Russia {
+  background-image: url(images/russia.png);
 }
 
 .space {
@@ -87,9 +139,7 @@ button.btn {
   margin-right: 11px;
 }
 
-a.active img {
-  display: none;
-}
+
 
 .bg-back {
   background-color: #ED4C8B;
