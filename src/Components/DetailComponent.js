@@ -15,14 +15,14 @@ const DetailComponent = () => {
     }
   }, [dispatch, data.length]);
   const { country } = useParams();
-  const countryData = data.filter((item) => item.country === country);
+  const countryData = data.filter((item) => item.Country_text === country);
   return (
     <Container>
       {countryData.length > 0
         ? (
           <div className="details">
             {countryData.map((item) => (
-              <div key={item.country}>
+              <div key={item.Country_text}>
                 <DetailsCard item={item} />
               </div>
             ))}
