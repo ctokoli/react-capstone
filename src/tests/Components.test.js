@@ -16,7 +16,7 @@ describe('Test for the components', () => {
   it('should show a text in the cardComponent', () => {
     const item = [];
     render(<CardComponent item={item} />);
-    const headings = screen.getByText('Total Population');
+    const headings = screen.getByText('Total Recovered');
     expect(headings).toBeInTheDocument();
   });
 });
