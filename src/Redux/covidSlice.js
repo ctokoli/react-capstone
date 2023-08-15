@@ -6,19 +6,19 @@ const initialState = {
 };
 
 const url = process.env.REACT_APP_API_URL;
-const options = {
-  method: 'GET',
-  headers: {
-    'X-RapidAPI-Key': process.env.REACT_APP_API_KEY,
-    'X-RapidAPI-Host': 'covid-193.p.rapidapi.com',
-  },
-};
+// const options = {
+//   method: 'GET',
+//   headers: {
+//     'X-RapidAPI-Key': process.env.REACT_APP_API_KEY,
+//     'X-RapidAPI-Host': 'covid-193.p.rapidapi.com',
+//   },
+// };
 
 export const getCovidData = createAsyncThunk('get/data', async (rejectWithValue) => {
   try {
-    const result = await fetch(url, options);
+    const result = await fetch(url);
     const data = await result.json();
-    const itemsToRender = data.response?.slice(100, 140);
+    const itemsToRender = data?.slice(0, 11);
     return itemsToRender;
   } catch (error) {
     return rejectWithValue(`there was an error: ${error}`);
