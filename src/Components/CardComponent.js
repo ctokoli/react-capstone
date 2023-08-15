@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 const CardComponent = ({ item }) => (
   <>
-    <div className={item.Country_text}>
+    <div>
       <div className="top">
         <h3>
           {item.Country_text}
@@ -19,6 +19,6 @@ const CardComponent = ({ item }) => (
 );
 
 CardComponent.propTypes = {
-  item: PropTypes.array.isRequired,
+  item: PropTypes.object.isRequired,
 };
 export default CardComponent;
