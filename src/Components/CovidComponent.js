@@ -27,6 +27,13 @@ const CovidComponent = () => {
     }
   }, [dispatch, data.length]);
 
+  useEffect(() => {
+    const projectDSection = document.querySelector('.World');
+    if (projectDSection) {
+      projectDSection.insertAdjacentHTML('afterend', '<div class="space"><h1>Space</h1></div>');
+    }
+  });
+
   return (
     <>
       {data.length > 0 ? (
@@ -37,13 +44,12 @@ const CovidComponent = () => {
           </section>
           <div className="grid">
             {data.map((item) => (
-              <Link to={`/${item.country}`} key={item.country}>
-                <div className="card-item active-data">
+              <div className={`card-item ${item.Country_text}`} key={item.Country_text}>
+                <Link to={`/${item.Country_text}`}>
                   <FontAwesomeIcon icon={faCircleRight} />
                   <CardComponent item={item} />
-                </div>
-
-              </Link>
+                </Link>
+              </div>
             ))}
           </div>
         </Container>
