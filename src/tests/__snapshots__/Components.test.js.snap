@@ -2,9 +2,7 @@
 
 exports[`Test for the components should render the cardComponent 1`] = `
 Array [
-  <div
-    className=""
-  >
+  <div>
     <div
       className="top"
     >
@@ -13,7 +11,7 @@ Array [
   </div>,
   <div>
     <h6>
-      Total Population
+      Total Recovered
     </h6>
     <h6 />
   </div>,
