@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+}
+
 h2 {
   color: white !important;
   margin-bottom: 0 !important;
@@ -23,10 +27,14 @@ div.grid a {
   color: #fff;
 }
 
-
-
 .inactive-data {
   background-color: #ce4277;
+  padding: 10px;
+}
+
+.card-item {
+  text-align: right;
+  background-color: #fd5294;
   padding: 10px;
 }
 
@@ -61,6 +69,10 @@ div.container h2 {
   background-color: #fd5294;
 }
 
+.space {
+  display: none;
+}
+
 a img {
   width: 27px;
 }
@@ -89,7 +101,7 @@ a.active img {
     grid-template-columns: 1fr 1fr;
     gap: 0;
     margin-top: 0;
-    grid-template-areas: 'World World';
+    grid-template-areas: 'World World' 'space space';
   }
 
   .World{
@@ -99,6 +111,17 @@ a.active img {
     background-repeat: no-repeat;
     background-size: contain;
     background-position-x: 61px;
+    border: 1px solid;
+    border-color: #fd5294 !important;
+  }
+
+  .space{
+    grid-area: space;
+    display: block;
+    background-color: #e43b7a;
+    border: 1px solid;
+    border-color: #e43b7a !important;
+
   }
 
   .card-item.USA {
@@ -108,6 +131,7 @@ a.active img {
       background-position-x: 30px;
       background-position-y: 20px;
       background-repeat: no-repeat;
+      border: none !important;
 }
 
 .card-item.Germany {
@@ -117,6 +141,7 @@ a.active img {
     background-position-x: 30px;
     background-position-y: 20px;
     background-repeat: no-repeat;
+    border: none !important;
 }
 
 .card-item.UK{
@@ -126,6 +151,7 @@ a.active img {
     background-position-x: 30px;
     background-position-y: 20px;
     background-repeat: no-repeat;
+    border: none !important;
 }
 
 .card-item.India {
@@ -228,7 +254,14 @@ a.active img {
       text-align: right;
       background-color: #fd5294;
       padding: 10px;
+      border: 1px solid;
+      border-color: #d6376d;
     }
+
+  .space h6 {
+    color: #fff;
+    padding: 10px 0 0 10px;
+  }
 
   .top h3 {
     margin-top: 30px;
