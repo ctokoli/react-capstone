@@ -19,6 +19,6 @@ const CardComponent = ({ item }) => (
 );
 
 CardComponent.propTypes = {
-  item: PropTypes.object.isRequired,
+  item: PropTypes.array.isRequired,
 };
 export default CardComponent;
