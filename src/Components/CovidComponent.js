@@ -1,39 +1,62 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleRight } from '@fortawesome/free-solid-svg-icons';
 import { getCovidData } from '../Redux/covidSlice';
+import FilterComponent from './filterComponent';
+import CardComponent from './CardComponent';
+import LoadingSpinner from './LoadingSpinner';
 
 const CovidComponent = () => {
-  const data = useSelector((state) => state.convidData.data);
-  const itemsToRender = data.slice(1, 11);
-  console.log(itemsToRender);
   const dispatch = useDispatch();
+  const data = useSelector((state) => {
+    const notFiltered = state.convidData.data;
+    const filtered = state.convidData.filterData;
+    if (filtered.length === 0) {
+      return notFiltered;
+    }
+    return filtered;
+  });
 
   useEffect(() => {
     if (data.length === 0) {
       dispatch(getCovidData());
     }
-    console.log('i fire once');
+  }, [dispatch, data.length]);
+
+  useEffect(() => {
+    const projectDSection = document.querySelector('.World');
+    if (projectDSection) {
+      projectDSection.insertAdjacentHTML('afterend', '<div class="space"><h6>STATS BY COUNTRY</h6></div>');
+    }
   });
 
   return (
-
     <>
-      <Container>
-        <Card style={{ width: '18rem' }}>
-          <Card.Img variant="top" src="holder.js/100px180" />
-          <Card.Body>
-            <Card.Title>Card Title</Card.Title>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the cards content.
-            </Card.Text>
-            <Button variant="primary">Go somewhere</Button>
-          </Card.Body>
-        </Card>
-      </Container>
+      {data.length > 0 ? (
+        <Container>
+          <section className="top-page">
+            <h2>COVID-19 Statistics: Filter by Region</h2>
+            <FilterComponent />
+          </section>
+          <div className="grid">
+            {data.map((item) => (
+              <div className={`card-item ${item.Country_text}`} key={item.Country_text}>
+                <Link to={`/${item.Country_text}`}>
+                  <FontAwesomeIcon icon={faCircleRight} />
+                  <CardComponent item={item} />
+                </Link>
+              </div>
+            ))}
+          </div>
+        </Container>
+      ) : (
+        <LoadingSpinner />
+      )}
+
     </>
   );
 };

@@ -1,25 +1,24 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import { NavLink } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
-import Form from 'react-bootstrap/Form';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMicrophone, faGear } from '@fortawesome/free-solid-svg-icons';
+import leftArrow from '../images/left-arrow-tick.png';
 
 const NavigationLayout = () => (
   <>
-    <Navbar bg="danger" data-bs-theme="dark">
+    <Navbar bg="back">
       <Container>
-        <Navbar.Brand><NavLink>Navbar</NavLink></Navbar.Brand>
-        <Form data-bs-theme="light">
-          <Row>
-            <Col>
-              <Form.Control
-                type="text"
-                placeholder="Search by Country"
-              />
-            </Col>
-          </Row>
-        </Form>
+        <Navbar.Brand>
+          <NavLink to="/">
+            <img src={leftArrow} alt="arrow" />
+          </NavLink>
+        </Navbar.Brand>
+        <Navbar>
+          <FontAwesomeIcon icon={faMicrophone} />
+          <FontAwesomeIcon icon={faGear} />
+        </Navbar>
       </Container>
     </Navbar>
   </>

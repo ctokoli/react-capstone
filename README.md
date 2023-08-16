@@ -1,70 +1,177 @@
-# Getting Started with Create React App
+<!-- TABLE OF CONTENTS -->
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 📗 Table of Contents
 
-## Available Scripts
+- [📖 About the Project](#about-project)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+<!-- - [🚀 Live Demo](#live-demo) -->
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [📝 License](#license)
 
-In the project directory, you can run:
+# 📖 Convid-19 Stats<a name="about-project"></a>
 
-### `npm start`
+In this project, I developed a Single Page Application (SPA) that use the Covid 19 API data to show verious Covid 19 Statistics in different countries.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Tech Stack <a name="tech-stack"></a>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li>HTML and CSS</li>
+    <li>JavaScript</li>
+    <li>React</li>
+  </ul>
+</details>
 
-### `npm test`
+<!-- Features -->
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Key Features <a name="key-features"></a>
 
-### `npm run build`
+- **React App**
+- **JSX**
+- **SPA**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<!-- LIVE DEMO -->
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🚀 Live Demo <a name="live-demo"></a>
 
-### `npm run eject`
+- [Live Demo Link](https://covid-stats-p1cd.onrender.com/)
+<!-- - N/A -->
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🚀 Video Recording <a name="video"></a>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- [Video ](https://drive.google.com/file/d/1eduqecZideXIKRMbId9lZr1JrjqlMRi4/view?usp=sharing)
+<!-- - N/A -->
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<!-- GETTING STARTED -->
 
-## Learn More
+## 💻 Getting Started <a name="getting-started"></a>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Prerequisites
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+In order to run this project you need:
+1. git
+2. VS Code or any code editor
+3. npm intalled
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Setup
 
-### Analyzing the Bundle Size
+Clone this repository to your desired folder:
+```sh
+  cd my-folder
+  git clone https://github.com/ctokoli/react-capstone.git
+  cd react-capstone
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Install
 
-### Making a Progressive Web App
+Install this project with:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+**Stylelint**
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. Run this code:
+```sh
+ npm install --save-dev stylelint@13.x stylelint-scss@3.x stylelint-config-standard@21.x stylelint-csstree-validator@1.x
+```
+2. Don't forget to copy [.stylelintrc.json](./.stylelintrc.json) to the root directory of your project.
 
-### Deployment
+**ESLint**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+1. Run this code:
+```sh
+ npm install --save-dev eslint@7.x eslint-config-airbnb@18.x eslint-plugin-import@2.x eslint-plugin-jsx-a11y@6.x eslint-plugin-react@7.x eslint-plugin-react-hooks@4.x @babel/eslint-parser@7.x @babel/core@7.x  @babel/plugin-syntax-jsx@7.x  @babel/preset-react@7.x @babel/preset-react@7.x
+```
+2. Don't forget to copy [.eslintrc.json](./.eslintrc.json) to the root directory of your project.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Usage
+
+To run this project in the browser, simply open the index.html file in your preferred browser by running the code below in your terminal:
+
+```sh
+ npm start
+```
+
+### Run tests
+
+To run tests, run the following command:
+
+```sh
+ npx stylelint "**/*.{css,scss}"
+```
+
+```sh
+ npx eslint "**/*.{js,jsx}"
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 👥 Author <a name="authors"></a>
+
+
+👤 **Cephas Tokoli**
+
+- GitHub: [@ctokoli](https://github.com/ctokoli)
+- Twitter: [@ctokoli](https://twitter.com/ctokoli)
+- LinkedIn: [Cephas Tokoli](https://www.linkedin.com/in/ctokoli)
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- Add More Data
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/ctokoli/react-capstone/issues).
+
+<!-- SUPPORT -->
+
+## ⭐️ Show your support <a name="support"></a>
+
+If you like this project please leave a star, I'd really appreciate it.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Acknowledgments <a name="acknowledgements"></a>
+
+- Project from [Microverse](https://www.microverse.org/) html & css module.
+- Many thanks to <a href="https://www.behance.net/sakwadesignstudio">Nelson Sakwa</a> for the UI design 
+- Thanks to the Microverse team for the great curriculum.
+- Thanks to the Code Reviewer(s) for the insightful feedbacks.
+- A great thanks to My coding partner(s), morning session team, and standup team for their contributions.
+- Hat tip to anyone whose code was used.
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
