@@ -53,7 +53,7 @@ In this project, I developed a Single Page Application (SPA) that use the Covid 
 
 ## 🚀 Video Recording <a name="video"></a>
 
-- [Video ](https://drive.google.com/file/d/1gJdc3TPpkgGaqFrCs9_UFWwKBBZWQsVk/view?usp=sharing)
+- [Video ](https://drive.google.com/file/d/1eduqecZideXIKRMbId9lZr1JrjqlMRi4/view?usp=sharing)
 <!-- - N/A -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
